@@ -53,6 +53,7 @@ steps:
       projectName: "$(SonarProjectName)"
       projectVersion: "$(Build.BuildNumber)"
       extraProperties: |
+        sonar.host.url=https://sonarcloud.io
         sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/TestResults/Coverage/coverage.opencover.xml
         sonar.exclusions=**/wwwroot/lib/**/*
 
